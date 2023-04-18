@@ -8,6 +8,12 @@ import { IProduct } from "./product";
 })
 
 export class ProductListComponent implements OnInit{
+
+  onNotify(message: string):void {
+    this.pageTitle = 'Product List - ' + message;
+  }
+
+
   //#region  public variables
   pageTitle : string = 'Product List';
   imageWidth: number = 30;

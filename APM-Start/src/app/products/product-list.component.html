@@ -35,7 +35,9 @@
                  <td>{{ product.productCode | coverToSpaces: '-'}}</td>
                  <td>{{ product.releaseDate }}</td>
                  <td>{{ product.price | currency}}</td>
-                 <td><pm-star [rating] ='product.starRating'  ></pm-star></td>
+                 <td><pm-star [rating] ='product.starRating'  
+                     (notify)='onNotify($event)'>
+                </pm-star></td>
             </tr>
         </thead>
     </table>
