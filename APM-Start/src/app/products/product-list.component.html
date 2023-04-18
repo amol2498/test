@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+</div>
+<div class="card-body">
+    <div class="row">
+        <div class="col-md-2">Filter by:</div>
+        <div class="col-md-4"><input type="text" [(ngModel)]='productFilter'></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><b>Filtered by:{{productFilter}}</b></div>
+    </div>
+    <div>
+    <table class="table" *ngIf='products.length'>
+        <thead>
+            <tr>    
+                <th>
+                    <button btn-primary (click)='toggleImage()'>Show Image</button>
+                </th>
+                <th></th>
+                <th>   Product  </th>
+                <th>   Code   </th>
+                <th>   Available   </th>
+                <th>   Price    </th>
+                <th>   Start Rating    </th>
+            </tr>
+            <tr *ngFor='let product of filteredProducts'>
+                
+                <td></td> 
+                <td class="image">
+                    <img width="{{imageWidth}}"  style.margin.px="{{imageMargin}}" src= "{{ product.imageUrl }}" *ngIf='showImage'>
+                </td>
+                <td>{{ product.productName }}</td>
+                 <td>{{ product.productCode | coverToSpaces: '-'}}</td>
+                 <td>{{ product.releaseDate }}</td>
+                 <td>{{ product.price | currency}}</td>
+                 <td><pm-star [rating] ='product.starRating'  ></pm-star></td>
+            </tr>
+        </thead>
+    </table>
+    </div>
+</div>
