@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fUjasuWFwqaUfCDPQ8JMzXYTSlXqs5mUNT0TGRrUtXc=",
+  "Source": "TFIT.api.productAPI",
+  "BasePath": "_content/TFIT.api.productAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

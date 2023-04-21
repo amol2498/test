@@ -1,7 +1,8 @@
 import { ReturnStatement } from "@angular/compiler";
 import { Injectable } from "@angular/core";
 import { IProduct } from "./product";
-
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 @Injectable(
     {
         providedIn:'root'
@@ -9,6 +10,11 @@ import { IProduct } from "./product";
 )
 export class ProductService{
     productArr: IProduct[] = [];
+    private productApiURL = 'https:/myservice/product/api/getProducts';
+    http: HttpClient;
+    constructor(private _http: HttpClient){
+        this.http = _http;
+    }
     getProducts(): IProduct[]{
         this.productArr = 
         [
@@ -64,6 +70,10 @@ export class ProductService{
             }
           ]
         return this.productArr;
+    }
+
+    getProductsFromAPI(): Observable<IProduct>{
+        return this._http.get<IProduct>(this.productApiURL);
     }
 
     filterProducts(value: string): IProduct[]{
