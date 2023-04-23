@@ -1,4 +1,6 @@
-export interface IProduct{
+import { observable } from "rxjs"
+
+export interface IProduct {
     productId: number,
     productName: string,
     productCode: string,

@@ -6,11 +6,14 @@ import { ProductListComponent } from './products/product-list.component';
 import { CovertToSpacesPipe } from './shared/convert-to-spaces';
 import { StartComponent } from './shared/star.component';
 import { HttpClientModule } from '@angular/common/http';
+import { observable } from 'rxjs';
+import { PeopleListComponent } from 'src/people/people-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
+    PeopleListComponent,
     CovertToSpacesPipe,
     StartComponent
   ],
