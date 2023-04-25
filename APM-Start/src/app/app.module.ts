@@ -22,6 +22,6 @@ import { PeopleListComponent } from 'src/people/people-list.component';
     FormsModule,
     HttpClientModule
   ],
-  bootstrap: [AppComponent,ProductListComponent]
+  bootstrap: [AppComponent,ProductListComponent, PeopleListComponent]
 })
 export class AppModule { }

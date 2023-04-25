@@ -4,8 +4,15 @@
     </div>
 </div>
 <div class="card-body">
-        <div>
-    <table class="table" *ngIf='products.length'>
+    <div class="row">
+        <div class="col-md-2">Filter by:</div>
+        <div class="col-md-4"><input type="text" [(ngModel)]='productFilter'></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><b>Filtered by:{{productFilter}}</b></div>
+    </div>
+    <div>
+    <table class="table" *ngIf='filteredProducts.length'>
         <thead>
             <tr>    
                 <th></th>
@@ -15,7 +22,7 @@
                 <th>   Price    </th>
                 <th>   Start Rating    </th>
             </tr>
-            <tr *ngFor='let product of products'>
+            <tr *ngFor='let product of filteredProducts'>
                 
                 <td></td> 
  
