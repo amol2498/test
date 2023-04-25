@@ -8,19 +8,30 @@ import { StartComponent } from './shared/star.component';
 import { HttpClientModule } from '@angular/common/http';
 import { observable } from 'rxjs';
 import { PeopleListComponent } from 'src/people/people-list.component';
-
+import { PeopleDetailsComponent } from 'src/people/people-details.component';
+import { WelcomeComponent } from './home/welcome.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     PeopleListComponent,
     CovertToSpacesPipe,
-    StartComponent
+    StartComponent,
+    PeopleDetailsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path:'products', component:PeopleListComponent},
+      {path:'products/:id', component:PeopleDetailsComponent},
+      {path:'welcome', component:WelcomeComponent},
+      {path:'', redirectTo:'products', pathMatch:'full'},
+      {path:'**', redirectTo:'welcome', pathMatch:'full'}
+    ])
   ],
   bootstrap: [AppComponent,ProductListComponent, PeopleListComponent]
 })

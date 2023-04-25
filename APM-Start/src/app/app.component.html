@@ -1,7 +1,18 @@
 <div style="text-align:center">
   <h1>
-    !!! Shri Swami Samarth !!!
+    
   </h1>
   
 </div>
-<pm-people></pm-people>
+
+<nav class="navbar navbar-expand navbar-light bg-light" >
+<a class="navbar-brand"><b>{{pageTitle}}</b></a>
+
+<ul class="nav nav-pills">
+  <li><a class="nav-link" routerLink="/welcome">Home</a></li>
+  <li><a class="nav-link" routerLink="/products">Product List</a></li>
+ </ul>
+</nav>
+<router-outlet></router-outlet>
+
+<!-- <pm-people></pm-people> -->

@@ -4,7 +4,7 @@ import {PeopleService} from "./people.service";
 import { Observable, Subject } from "rxjs";
 
 @Component({
-  selector : 'pm-people',
+  // selector : 'pm-people',
   templateUrl: './people-list.component.html',
   styleUrls: ['./people-list.component.css']
 })
@@ -41,10 +41,10 @@ export class PeopleListComponent implements OnInit{
     
   }
 
-  ngOnDestroy():void
-  {
-    this.sub.unsubscribe();
-  }
+  // ngOnDestroy():void
+  // {
+  //   this.sub.unsubscribe();
+  // }
   
   get productFilter():string{
     return this._productFilter;
