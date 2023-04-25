@@ -29,7 +29,7 @@ import { RouterModule } from '@angular/router';
       {path:'products', component:PeopleListComponent},
       {path:'products/:id', component:PeopleDetailsComponent},
       {path:'welcome', component:WelcomeComponent},
-      {path:'', redirectTo:'products', pathMatch:'full'},
+      {path:'', redirectTo:'welcome', pathMatch:'full'},
       {path:'**', redirectTo:'welcome', pathMatch:'full'}
     ])
   ],

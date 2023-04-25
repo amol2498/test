@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   templateUrl: './app.component.html'  
 })
 export class AppComponent{
-  pageTitle : string = 'Welcome to Triface Solutions'
+  pageTitle : string = 'TriFace Solutions'
   pageText : string = 'LETS GROW'
 }
 
