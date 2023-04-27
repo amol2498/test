@@ -11,6 +11,7 @@ import { PeopleListComponent } from 'src/people/people-list.component';
 import { PeopleDetailsComponent } from 'src/people/people-details.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
+import { ProductModule } from 'src/people/product.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +26,9 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ProductModule,
     RouterModule.forRoot([
-      {path:'products', component:PeopleListComponent},
-      {path:'products/:id', component:PeopleDetailsComponent},
-      {path:'welcome', component:WelcomeComponent},
-      {path:'', redirectTo:'welcome', pathMatch:'full'},
-      {path:'**', redirectTo:'welcome', pathMatch:'full'}
+      {path:'', component:WelcomeComponent},
     ])
   ],
   bootstrap: [AppComponent,ProductListComponent, PeopleListComponent]
